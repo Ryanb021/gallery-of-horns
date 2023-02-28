@@ -6,7 +6,6 @@ class HornedBeast extends React.Component {
     return (
       <article>
         <h2>{this.props.name}</h2>
-        <p>text here</p>
       </article>
 
     )

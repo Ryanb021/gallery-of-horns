@@ -1,4 +1,7 @@
 import React from 'react';
+import Main from'./Main';
+import Footer from './Footer';
+import './App.css';
 
 class App extends React.component {
 
@@ -8,12 +11,11 @@ class App extends React.component {
         <header>
           <h1>Gallery of Horns</h1>
         </header>
-        <main></main>
-        <footer>&copy Ryan Bagan 2023</footer>
+        <Main/>
+        <Footer/>
       </>
     );
   }
-
 }
 
 export default App;

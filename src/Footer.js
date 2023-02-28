@@ -4,7 +4,7 @@ import './Footer.css';
 class Footer extends React.Component {
   render () {
     return(
-      <footer>&copy Ryan Bagan 2023</footer>
+      <footer>&copy; Ryan Bagan 2023</footer>
     )
   }
 

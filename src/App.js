@@ -3,7 +3,7 @@ import Main from'./Main';
 import Footer from './Footer';
 import './App.css';
 
-class App extends React.component {
+class App extends React.Component {
 
   render() {
     return (

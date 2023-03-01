@@ -3,10 +3,20 @@
   padding: 1vw;
   margin-bottom: 1vw;
   width: 19%;
+  background-color: aquamarine;
 }
 
 .beasts h2 {
-  color: purple;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(197, 0, 0);
+}
+
+.beasts h3 {
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid gray;
 }
 
 .beasts img {
@@ -20,6 +30,11 @@
   margin-bottom: .5rem;
 }
 
-.person p:last-of-type:hover {
-  color: purple;
+.clickme {
+  font-weight: bold;
+}
+
+.clickme:hover {
+  color: red;
+  cursor: pointer;
 }

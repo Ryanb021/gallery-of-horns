@@ -1,18 +1,27 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-//import './Main.css';
+import './Main.css';
 
 
 class Main extends React.Component {
-  render () {
-    return(
+  render() {
+
+    let horns = [];
+    this.props.data.forEach((creatures, index) => {
+      console.log(creatures.description);
+      horns.push(
+        <HornedBeast
+          title={creatures.title}
+          imageURL={creatures.image_url}
+          description={creatures.description}
+          key={index}
+        />
+      )
+    })
+
+    return (
       <main>
-        <HornedBeast name="Batman"/>
-        <p>The horned hero. Fear him!</p>
-        <HornedBeast name="Batman Who Laughs"/>
-        <p>Batman's horned evil side. Very dangerous.</p>
-        <HornedBeast name="The Dark Knight"/>
-        <p>The ultimate horned dark knight!</p>
+        {horns}
       </main>
     )
 

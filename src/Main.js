@@ -14,6 +14,8 @@ class Main extends React.Component {
           title={creatures.title}
           imageURL={creatures.image_url}
           description={creatures.description}
+          addHearts={this.props.addHearts}
+          handleOpenModal={this.props.handleOpenModal}
           key={index}
         />
       )

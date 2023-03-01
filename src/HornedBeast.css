@@ -1,3 +1,25 @@
-h3 {
+.beasts {
+  border: 1px solid gray;
+  padding: 1vw;
+  margin-bottom: 1vw;
+  width: 19%;
+}
+
+.beasts h2 {
+  color: purple;
+}
+
+.beasts img {
+  width: 100%;
+}
+
+.beasts p {
+  font-size: 11px;
+  margin: auto;
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.person p:last-of-type:hover {
   color: purple;
 }

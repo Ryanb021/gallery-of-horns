@@ -19,7 +19,7 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <article>
+      <article className="beasts">
         <h2>{this.props.name}</h2>
         <p>{this.state.waves} greetings</p>
         <p onClick={this.handleWaves}>Say Hello!</p>

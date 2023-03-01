@@ -8,7 +8,7 @@ class Main extends React.Component {
 
     let horns = [];
     this.props.data.forEach((creatures, index) => {
-      //console.log(creatures.title);
+      console.log(creatures.description);
       horns.push(
         <HornedBeast
           title={creatures.title}

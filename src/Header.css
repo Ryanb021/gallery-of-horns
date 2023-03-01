@@ -1,5 +1,9 @@
 Header {
-  color: blue;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: purple;
   text-align: center;
   margin-bottom: 30px;
+  border: 1px solid gray;
+  background-color: aquamarine;
 }

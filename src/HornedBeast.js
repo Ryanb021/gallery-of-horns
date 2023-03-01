@@ -1,4 +1,5 @@
 import React from "react";
+//import Button from 'react-bootstrap/Button';
 import './HornedBeast.css';
 
 class HornedBeast extends React.Component {
@@ -26,6 +27,7 @@ class HornedBeast extends React.Component {
         src={this.props.imageURL}
         alt={this.props.alt}
         />
+
       </article>
     )
   };

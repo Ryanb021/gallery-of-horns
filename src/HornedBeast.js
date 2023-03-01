@@ -31,7 +31,7 @@ class HornedBeast extends React.Component {
         <img
           src={this.props.imageURL}
           alt={this.props.name}
-          //description={this.props.description}
+          description={this.props.description}
           onClick={this.props.addHearts}
         />
 

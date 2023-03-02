@@ -48,7 +48,7 @@ class App extends React.Component {
     return (
       <>
         <Header hearts={this.state.hearts} />
-        <Main className="animals"
+        <Main 
           data={data}
           addHearts={this.addHearts}
           //toggleHearts={this.toggleHearts}
@@ -56,10 +56,10 @@ class App extends React.Component {
         <Footer />
         <Modal show={this.state.showModal} onHide={this.handleCloseModal} size="lg">
           <Modal.Header closeButton>
-            <Modal.Title>{this.state.title}</Modal.Title>
+            <Modal.Title className="title">{this.state.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <img src={this.state.image_url} alt={this.state.title} />
+            <img className="animals" src={this.state.image_url} alt={this.state.title} />
             <p>{this.state.description}</p>
           </Modal.Body>
         </Modal>

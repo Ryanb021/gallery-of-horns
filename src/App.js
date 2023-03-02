@@ -12,8 +12,10 @@ class App extends React.Component {
     super(props);
     this.state = {
       hearts: '',
-        showModal: false,
-        personName: ''
+      image_url: '',
+      title: '',
+      description: '',
+      showModal: false,
     }
   }
 
@@ -29,25 +31,31 @@ class App extends React.Component {
     })
   }
 
-  handleOpenModal = (name) => {
+  handleOpenModal = (title, url, description) => {
     this.setState({
       showModal: true,
-      personName: name
+      image_url: url,
+      title: title,
+      description: description,
     })
   }
   render() {
     return (
       <>
         <Header hearts={this.state.hearts} />
-        <Main 
-        data={data} 
-        addHearts={this.addHearts}
-        handleOpenModal={this.handleOpenModal} />
+        <Main className="animals"
+          data={data}
+          addHearts={this.addHearts}
+          handleOpenModal={this.handleOpenModal} />
         <Footer />
-        <Modal show={this.state.showModal} onHide={this.handleCloseModal}>
+        <Modal show={this.state.showModal} onHide={this.handleCloseModal} size="lg">
           <Modal.Header closeButton>
             <Modal.Title>{this.state.personName}</Modal.Title>
           </Modal.Header>
+          <Modal.Body>
+            <img src={this.state.image_url} alt={this.state.title} />
+            <p>{this.state.description}</p>
+          </Modal.Body>
         </Modal>
       </>
     );

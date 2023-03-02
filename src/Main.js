@@ -3,12 +3,13 @@ import HornedBeast from './HornedBeast';
 import './Main.css';
 
 
+
 class Main extends React.Component {
   render() {
 
     let horns = [];
     this.props.data.forEach((creatures, index) => {
-      console.log(creatures.description);
+      //console.log(creatures.description);
       horns.push(
         <HornedBeast
           title={creatures.title}
@@ -25,6 +26,7 @@ class Main extends React.Component {
       <main>
         {horns}
       </main>
+
     )
 
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from './Main';
 import Header from './Header'
+import SelectedBeast from './SelectedBeast';
 import Footer from './Footer';
 import data from './data.json';
 import './App.css';
@@ -25,9 +26,9 @@ class App extends React.Component {
     });
   }
   //toggleHearts = () => {
-    //this.setState({
-      //hearts: !this.state.show
-    //})
+  //this.setState({
+  //hearts: !this.state.show
+  //})
   //}
 
   handleCloseModal = () => {
@@ -48,21 +49,21 @@ class App extends React.Component {
     return (
       <>
         <Header hearts={this.state.hearts} />
-        <Main 
+        <Main
           data={data}
           addHearts={this.addHearts}
           //toggleHearts={this.toggleHearts}
           handleOpenModal={this.handleOpenModal} />
         <Footer />
-        <Modal show={this.state.showModal} onHide={this.handleCloseModal} size="lg">
-          <Modal.Header closeButton>
-            <Modal.Title className="title">{this.state.title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <img className="animals" src={this.state.image_url} alt={this.state.title} />
-            <p>{this.state.description}</p>
-          </Modal.Body>
-        </Modal>
+        <SelectedBeast
+          show={this.state.showModal}
+          onHide={this.handleCloseModal}
+          src={this.state.image_url}
+          alt={this.state.keyword}
+          title={this.state.title}
+          description={this.state.description}
+        />
+
       </>
     );
   }

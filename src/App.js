@@ -22,8 +22,13 @@ class App extends React.Component {
   addHearts = () => {
     this.setState({
       hearts: this.state.hearts + '💖'
-    })
+    });
   }
+  //toggleHearts = () => {
+    //this.setState({
+      //hearts: !this.state.show
+    //})
+  //}
 
   handleCloseModal = () => {
     this.setState({
@@ -46,11 +51,12 @@ class App extends React.Component {
         <Main className="animals"
           data={data}
           addHearts={this.addHearts}
+          //toggleHearts={this.toggleHearts}
           handleOpenModal={this.handleOpenModal} />
         <Footer />
         <Modal show={this.state.showModal} onHide={this.handleCloseModal} size="lg">
           <Modal.Header closeButton>
-            <Modal.Title>{this.state.personName}</Modal.Title>
+            <Modal.Title>{this.state.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <img src={this.state.image_url} alt={this.state.title} />

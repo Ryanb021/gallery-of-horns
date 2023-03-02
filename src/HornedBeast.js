@@ -25,10 +25,10 @@ class HornedBeast extends React.Component {
   render() {
     return (
       <article className="beasts">
-        <h2>{this.props.title}</h2>
+        <h2 onClick={this.props.addHearts}>{this.props.title}</h2>
         <h3>{this.props.description}</h3>
         <p>💖{this.state.waves} Favorite/s</p>
-        <p className="clickme" onClick={this.handleWaves}>---Like me! Love me! Please!---</p>
+        <button className="clickme" onClick={this.handleWaves}>---Like me! Love me! Please!---</button>
         <img onClick={this.handleHeaderClick}//, {this.props.addHearts}
           src={this.props.imageURL}
           alt={this.props.keyword}

@@ -18,6 +18,7 @@ class HornedBeast extends React.Component {
   }
 
   handleHeaderClick = () => {
+    this.props.addHearts()
     this.handleWaves()
     this.props.handleOpenModal( this.props.title, this.props.imageURL, this.props.description);
     this.handleWaves();

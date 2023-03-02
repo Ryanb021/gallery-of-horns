@@ -18,21 +18,23 @@ class HornedBeast extends React.Component {
   }
 
   handleHeaderClick = () => {
-    this.props.handleOpenModal( this.props.name );
+    this.props.handleOpenModal( this.props.title, this.props.imageURL, this.props.description);
+    this.handleWaves();
   }
 
   render() {
     return (
       <article className="beasts">
-        <h2 onClick={this.handleHeaderClick}>{this.props.title}</h2>
+        <h2 onClick={this.props.addHearts}>{this.props.title}</h2>
         <h3>{this.props.description}</h3>
-        <p>{this.state.waves} 💖Favorite/s</p>
-        <p className="clickme" onClick={this.handleWaves}>---Like me! Love me! Please!---</p>
-        <img
+        <p>💖{this.state.waves} Favorite/s</p>
+        <button className="clickme" onClick={this.handleWaves}>---Like me! Love me! Please!---</button>
+        <img onClick={this.handleHeaderClick}//, {this.props.addHearts}
           src={this.props.imageURL}
-          alt={this.props.name}
-          //description={this.props.description}
-          onClick={this.props.addHearts}
+          alt={this.props.keyword}
+          title={this.props.title}
+          description={this.props.description}
+          //onClick={this.props.addHearts}
         />
 
       </article>

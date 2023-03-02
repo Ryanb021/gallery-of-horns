@@ -13,13 +13,16 @@
   text-align: center;
   color: rgb(197, 0, 0);
   border: 1px solid gray;
-  background-color:white;
+  background-color: white;
   border-radius: 6px;
 }
 
-/*.beasts h2:hover {
+.beasts h2:hover {
   cursor: pointer;
-}*/
+  background-color:rgb(187, 96, 96);
+  color: white;
+
+}
 
 .beasts h3 {
   font-size: 15px;
@@ -36,7 +39,7 @@
 
 .beasts img:hover {
   cursor: pointer;
-  border: 2px solid red;
+  border: 2px solid yellow;
 }
 
 .beasts p {
@@ -47,10 +50,17 @@
 }
 
 .clickme {
+  font-size: 10px;
   font-weight: bold;
+  border-radius: 10px;
+  background-color: pink;
+  border: 1px solid red;
+  margin-bottom: 10px;
 }
 
 .clickme:hover {
-  color: red;
+  color: yellow;
   cursor: pointer;
+  background-color:crimson;
+  /*border: 3px solid yellow;*/
 }

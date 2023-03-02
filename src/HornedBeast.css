@@ -17,12 +17,12 @@
   border-radius: 6px;
 }
 
-.beasts h2:hover {
+/*.beasts h2:hover {
   cursor: pointer;
   background-color:rgb(187, 96, 96);
   color: white;
 
-}
+}*/
 
 .beasts h3 {
   font-size: 15px;

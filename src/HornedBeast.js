@@ -1,5 +1,5 @@
 import React from "react";
-//import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import './HornedBeast.css';
 
 class HornedBeast extends React.Component {
@@ -28,7 +28,7 @@ class HornedBeast extends React.Component {
         <h2 onClick={this.props.addHearts}>{this.props.title}</h2>
         <h3>{this.props.description}</h3>
         <p>💖{this.state.waves} Favorite/s</p>
-        <button className="clickme" onClick={this.handleWaves}>---Like me! Love me! Please!---</button>
+        <Button className="clickme" onClick={this.handleWaves}>---Like me! Love me! Please!---</Button>
         <img onClick={this.handleHeaderClick}//, {this.props.addHearts}
           src={this.props.imageURL}
           alt={this.props.keyword}

@@ -19,6 +19,7 @@ class HornedBeast extends React.Component {
 
   handleHeaderClick = () => {
     this.props.addHearts()
+    //this.props.toggleHearts()
     this.handleWaves()
     this.props.handleOpenModal( this.props.title, this.props.imageURL, this.props.description);
     this.handleWaves();
@@ -36,9 +37,11 @@ class HornedBeast extends React.Component {
           alt={this.props.keyword}
           title={this.props.title}
           description={this.props.description}
+          horns={this.props.horns}
           //onClick={this.props.addHearts}
+          
         />
-
+        <h4>This beast has {this.props.horns} horn/s!</h4>
       </article>
     )
   };

@@ -5,8 +5,9 @@ import SelectedBeast from './SelectedBeast';
 import Footer from './Footer';
 import data from './data.json';
 import './App.css';
+import ListGroup from 'react-bootstrap/ListGroup';
 //import { Modal } from 'bootstrap';
-import Modal from 'react-bootstrap/Modal'
+//import Modal from 'react-bootstrap/Modal'
 
 class App extends React.Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class App extends React.Component {
           alt={this.state.keyword}
           title={this.state.title}
           description={this.state.description}
+          horns={this.state.horns}
         />
 
       </>

@@ -7,14 +7,15 @@ import './Main.css';
 class Main extends React.Component {
   render() {
 
-    let horns = [];
+    let hornsOfBeast = [];
     this.props.data.forEach((creatures, index) => {
       //console.log(creatures.description);
-      horns.push(
+      hornsOfBeast.push(
         <HornedBeast
           title={creatures.title}
           imageURL={creatures.image_url}
           description={creatures.description}
+          horns={creatures.horns}
           addHearts={this.props.addHearts}
           //toggleHearts={this.props.toggleHearts}
           handleOpenModal={this.props.handleOpenModal}
@@ -25,7 +26,7 @@ class Main extends React.Component {
 
     return (
       <main>
-        {horns}
+        {hornsOfBeast}
       </main>
 
     )

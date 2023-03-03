@@ -4,8 +4,9 @@ import Header from './Header'
 import SelectedBeast from './SelectedBeast';
 import Footer from './Footer';
 import data from './data.json';
+import FormComponent from './Form';
 import './App.css';
-import ListGroup from 'react-bootstrap/ListGroup';
+//import ListGroup from 'react-bootstrap/ListGroup';
 //import { Modal } from 'bootstrap';
 //import Modal from 'react-bootstrap/Modal'
 
@@ -19,7 +20,7 @@ class App extends React.Component {
       description: '',
       showModal: false,
       filterHorns: '',
-      filterData:'',
+      filterData: '',
     }
   }
 
@@ -48,12 +49,46 @@ class App extends React.Component {
       description: description,
     })
   }
+
+  hornCount = (event) => {
+    event.preventDefault();
+    if (this.state.filterHorns === "4") {
+      let newHorns = data.filter(i => i.horns >= 4);
+      this.setState({ filterData: newHorns })
+
+    } else if (this.state.filterHorns === "1") {
+      let newHorns = data.filter(i => i.horns === 1);
+      this.setState({ filterData: newHorns })
+
+    } else if (this.state.filterHorns === "2") {
+      let newHorns = data.filter(i => i.horns === 2);
+      this.setState({ filterData: newHorns })
+
+    } else if (this.state.filterHorns === "3") {
+      let newHorns = data.filter(i => i.horns === 3);
+      this.setState({ filterData: newHorns })
+
+    } else if (this.state.filterHorns === "all") {
+      this.setState({ filterData: data })
+    }
+  }
+
+  select = (event) => {
+    this.setState({ filterHorns: event.target.value })
+  }
+
   render() {
     return (
       <>
         <Header hearts={this.state.hearts} />
+
+        <FormComponent
+          hornCount={this.hornCount}
+          select={this.select}
+        />
+
         <Main
-          data={data}
+          data={this.state.filterData}
           addHearts={this.addHearts}
           //toggleHearts={this.toggleHearts}
           handleOpenModal={this.handleOpenModal} />

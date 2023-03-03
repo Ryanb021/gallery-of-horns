@@ -7,11 +7,10 @@ import './Main.css';
 class Main extends React.Component {
   render() {
 
-    let hornsOfBeast = [];
-    this.props.data.forEach((creatures, index) => {
+    let hornsOfBeast = this.props.data.map((creatures, index) => {
       //console.log(creatures.description);
-      hornsOfBeast.push(
-        <HornedBeast
+
+        return <HornedBeast
           title={creatures.title}
           imageURL={creatures.image_url}
           description={creatures.description}
@@ -21,8 +20,8 @@ class Main extends React.Component {
           handleOpenModal={this.props.handleOpenModal}
           key={index}
         />
-      )
-    })
+      
+    });
 
     return (
       <main>

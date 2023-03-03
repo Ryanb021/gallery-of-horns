@@ -5,10 +5,10 @@ class SelectedBeast extends React.Component {
   render() {
     return (
       <>
-        <Modal 
+        <Modal className="title"
         show={this.props.show} onHide={this.props.onHide} size="lg">
           <Modal.Header closeButton>
-            <Modal.Title className="title">{this.props.title}</Modal.Title>
+            <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <img className="animals" src={this.props.src} alt={this.props.alt} />

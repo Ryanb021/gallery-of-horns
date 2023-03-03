@@ -18,6 +18,8 @@ class App extends React.Component {
       title: '',
       description: '',
       showModal: false,
+      filterHorns: '',
+      filterData:'',
     }
   }
 

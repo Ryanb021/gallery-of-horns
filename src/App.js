@@ -20,7 +20,7 @@ class App extends React.Component {
       description: '',
       showModal: false,
       filterHorns: '',
-      filterData: '',
+      filterData: data,
     }
   }
 

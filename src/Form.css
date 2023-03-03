@@ -1,0 +1,26 @@
+.hornMan {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 30px;
+  color: blue;
+  background-color:lightpink;
+  margin-bottom: 20px;
+}
+
+.selection {
+  text-align: center;
+  font-size: 20px;
+}
+
+.press {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.press:hover {
+  background-color: red;
+}

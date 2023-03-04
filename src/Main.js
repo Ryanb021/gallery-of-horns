@@ -7,7 +7,7 @@ import './Main.css';
 class Main extends React.Component {
   render() {
 
-    let hornsOfBeast = this.props.data.map((creatures, index) => {
+    let hornsOfBeast = this.props.data.map((creatures, _id) => {
       //console.log(creatures.description);
 
         return <HornedBeast
@@ -18,7 +18,7 @@ class Main extends React.Component {
           addHearts={this.props.addHearts}
           //toggleHearts={this.props.toggleHearts}
           handleOpenModal={this.props.handleOpenModal}
-          key={index}
+          key={creatures._id}
         />
       
     });
